@@ -1,0 +1,125 @@
+commit 3199d35259eaa5a09af4f216514c5fc117e93d2b
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Fri Apr 15 23:42:44 2022 -0400
+
+    Final changes have been made. Only two tests seem to fail out of the 18 total. Did not have time to check the time and memory management.
+
+commit 0937d927ddfb8ad8eb6cd259ba2005c81fa88f42
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Fri Apr 15 23:14:44 2022 -0400
+
+    Some major changes have been made to the code. Instead of using the parents like before, this maze will be solved by following arrows that were set while creating the neighbors.
+
+commit 48d190b8c35fb56b3759f7273681384b428df95d
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Fri Apr 15 21:21:47 2022 -0400
+
+    A few things have changed. The node now contains a parent that points to where the node was a step before. This will be used by the BFS solver to find the solution path. The only issue is that it prints fine normally, but gives errors with the numbers in gbd. Still working to fix that now
+
+commit 51723915b4bee397e61e614d27ef1912bd178e07
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Fri Apr 15 12:22:07 2022 -0400
+
+    mopsolver.c was chhanged so that it does not need a generate_neighbors function. Also, the insert function was changed again so that it can still enter a node a new row and col values.
+
+commit ca56874a00abf201dcb3e0fa8f265b69e39197a9
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Thu Apr 14 21:00:05 2022 -0400
+
+    Function to insert the node was changed so that it will pass in the node itself to be insert. Not the row and cool. The function calls were also changed.
+
+commit b97666da08d5a6637ccfa588399bfc6953ea21bc
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Wed Apr 13 21:56:58 2022 -0400
+
+    Changes have been made to the program succh the DFSS will no longer be implemented. Also, thequeue is now created propely with no valgrind errors.
+
+commit e2d88a8b81e355304ec567afa07537ba5e05fd92
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Wed Apr 13 18:48:13 2022 -0400
+
+    Fixed how the maze was being input. It gets taken in fine. Started to fix errors regarding the printing.
+
+commit 2f9f707e20b55708cfc8e0f05f138d0650f6f144
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Wed Apr 13 17:18:56 2022 -0400
+
+    More changes were made in order to fix the issue with the graph not being input properly. The method of printing through the command line arguments was also fixed so that it will only print if an output was provided. Finally, the methods to convert between a matrix and a grid and vice versa were deleted since they were unnecessary.
+
+commit dd14f398c6f206c11c38a51976df904032044e98
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Tue Apr 12 19:11:54 2022 -0400
+
+    Functions were changed so that the array that is being input is a double pointer to start with. The size of the array will be calculated in the input_gaph function using fseek and other various functions. The function calls will be the dereferenced array so tthat the functions can change the values that are necessary
+
+commit e0b9e2ac4e813977b6a58091872f3855b2a1067f
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Fri Apr 8 21:50:23 2022 -0400
+
+    The BBFS is complete.  The generate_path function still needs to be fixed.
+
+commit cbc8875559bdef244010df5964c6d2306a699b74
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Mon Apr 4 18:34:53 2022 -0400
+
+    The solver BFS function is almost complete. A function was made in order to generate the neighbor of the current node, and check if a node is already in the predecessor list.
+
+commit 01a47b0efb4fac5057b779bfbff1fd6c77828213
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Sun Apr 3 19:34:08 2022 -0400
+
+    The function to solve the BFS was started, the function to find the valid neighbors of a given node were added, and the function to check if a node was already in a list or not was added as well.
+
+commit bb87b1af79f6f27de6238e867de73cc62a96f280
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Thu Mar 31 23:08:13 2022 -0400
+
+    Function and some file documentation was added to the three files that I have created so far. Also, the DFS has been added for the maze to find out if a solution exists or not.
+
+commit a85d3fbbc6d15d29d620ed5dd8ee6f38c363889a
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Thu Mar 31 18:59:39 2022 -0400
+
+    The mopsolver was changed in order to follow the snake casing standard that was used in the queueList file. Also, some of the command line arguments were changed in order to open the input and output files properly.
+
+commit 5a5d498f4d670f2a61aaa527d678618468aa1e3a
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Thu Mar 31 18:21:25 2022 -0400
+
+    The rest of the functions were added to the queueList header file. These functions include the functions to check if the list is empty,  to add a node to the list, to remove a node from the list, to clear the list, and to destroy the list.
+
+commit f3fc5995109dfe4466946e3cc9e6daba81e63407
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Thu Mar 31 17:59:48 2022 -0400
+
+    The header file for the list of visited coordinates that will be used for the BFS algorithm has been added. The basic functions that will be used have also been added. Finally, the first function to create the list has been added in the source file for the queue.
+
+commit f88670ee7a36f25c0130e91449fdc6cc98b11a6b
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Sun Mar 13 22:59:42 2022 -0400
+
+    Switch case for when the user wants to use an output file was changed in order to take in the name of the output file from the command line argument. The function call for PrintMatrix was then changed in order to take in the opened output file.
+
+commit f1f4ccc0996127e775cef4aaecae971228d17f9d
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Sun Mar 13 22:53:01 2022 -0400
+
+    Function was added in order to print the matrix to the standard output. It has not been updated so that it can be printed to an output file yet
+
+commit 494cb6d1f29735896bb0dc772d24143913d82063
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Sun Mar 13 22:16:26 2022 -0400
+
+    Function was added to take in the data from a file pointer. It will be stored in a 1d array first. Then, a function was added in order to convert the 1d array into a matrix for easier use later on. Code was kept in the input function in order for the data to be directly taken into a matrix (This will be kept in for my sake for now). Finally, the memory for the dynamically allocated 1d array was freed at the end of the main.
+
+commit 234fb031a479bad4ffa9a0ba8edf71a36d0152ec
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Sat Mar 12 11:38:39 2022 -0500
+
+    Function was added to print the help message to either stdout or stderr based on how the function was being called.
+
+commit 931b635920b30e722f1ac639b255efeb3ef6aeb2
+Author: Gino A Coppola <gac6151@cs.rit.edu>
+Date:   Sat Mar 12 11:02:31 2022 -0500
+
+    Initial main function made and set up the structure for the command line arguments. The function prototypes were also added for the print usage/help functions. Definitions were not added yet.
